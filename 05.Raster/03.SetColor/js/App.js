@@ -47,9 +47,9 @@ class App {
     this.step = Math.floor(this.img.width / 100);
     // get rgb data for each step pixel in 100 x 100
     this.rgb = [];
-    for (let i = 0; i < this.img.height; i += this.step) {
-      for (let j = 0; j < this.img.width; j += this.step) {
-        let index = (i * this.img.width + j) * 4;
+    for (let y = 0; y < this.img.height; y += this.step) {
+      for (let x = 0; x < this.img.width; x += this.step) {
+        let index = (y * this.img.width + x) * 4;
         this.rgb.push({
           r: this.pixels[index],
           g: this.pixels[index + 1],
@@ -69,6 +69,7 @@ class App {
     this.grid.forEach((circle, index) => {
       const color = this.rgb[index];
       circle.color = `rgb(${color.r}, ${color.g}, ${color.b})`;
+      // circle.color = "rgb(" + color.r + "," + color.g + "," + color.b + ")";
       circle.draw();
     });
 
