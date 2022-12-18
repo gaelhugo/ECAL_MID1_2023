@@ -1,3 +1,12 @@
+/**
+ *
+ * VERSION FAITE EN COURS COLLECTIVEMENT
+ * AVEC UNE SEULE BOUCLE DE RENDU
+ *
+ * ON DOIT MASQUER LES CERCLES AVEC CETTE METHODE
+ * CAR le beginPath() et le closePath() ne fonctionnent pas sinon (car intercepté ceux du cercle)
+ */
+
 class App {
   constructor() {
     this.pixelRatio = window.devicePixelRatio || 1;
